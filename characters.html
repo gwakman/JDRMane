@@ -16,6 +16,20 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="./js/ratchet.js"></script>
+    <script type="text/javascript">
+      function hide(a){
+        pchild=a.parentNode.getElementsByTagName('p');
+        if(pchild[0].style.visibility!='hidden'){
+          pchild[0].style.visibility='hidden';
+          pchild[0].style.height='0';
+          pchild[0].style.marginTop='';
+        } else {
+          pchild[0].style.visibility='';
+          pchild[0].style.height='';
+          pchild[0].style.marginTop='10px';
+        }
+      }
+    </script>
   </head>
   <body>
 
@@ -49,7 +63,31 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      <p class="content-padded">Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:</p>
+      <ul class="table-view">
+        <li class="table-view-divider">PJ</li>
+        <li class="table-view-cell">
+          <a class="navigate-right" onclick="hide(this)">Item 1</a>
+          <p style="visibility:hidden;height:0">
+            test<br>
+            test 2
+          </p>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right" onclick="hide(this)">Item 2</a>
+          <p style="visibility:hidden;height:0">
+            test<br>
+            test 2
+          </p>
+        </li>
+        <li class="table-view-divider">PNJ</li>
+        <li class="table-view-cell">
+          <a class="navigate-right" onclick="hide(this)">Item 3</a>
+          <p style="visibility:hidden;height:0">
+            test<br>
+            test 2
+          </p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
