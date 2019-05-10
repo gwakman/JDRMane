@@ -16,6 +16,12 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="./js/ratchet.js"></script>
+    <style>
+      #map {
+        height: 700px;
+        width: 30%;
+       }
+    </style>
   </head>
   <body>
 
@@ -49,7 +55,50 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      <p class="content-padded">Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:</p>
+      <div id="map"></div>
+      <script class="js-custom">
+        function initMap() {
+
+          var imageBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(62.281819, -150.287132),
+            new google.maps.LatLng(62.500471, -149.985608));
+
+          var imageSrc = './Mane.jpg';
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 62.391907, lng: -150.129291},
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            backgroudColor: 'none',
+            disableDefaultUI: true,
+            panControl: false,
+            minZoom: 11,
+            maxZoom: 13
+          });
+
+          var mapStyles = [
+          {
+            featureType: "all",
+            stylers: [
+              { visibility: "off" }]
+          }];
+
+          map.setOptions({styles: mapStyles});
+
+          myOverlay = new google.maps.GroundOverlay(imageSrc, imageBounds);
+
+          myOverlay.setMap(map);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC35Rgq7LwqkYx0pC1_ZBae_5lcJQ1Hsqs&callback=initMap" class="js-custom"></script>
     </div>
+    <script>
+      window.addEventListener('push', function(){
+        var scriptsList = document.querySelectorAll('script.js-custom');
+        for(var i = 0; i < scriptsList.length; ++i) {
+          eval(scriptsList[i].innerHTML);
+        }
+      });
+    </script>
   </body>
 </html>

@@ -52,5 +52,13 @@
 	     	<img src="logo_Mane.png" style="display: block; margin-left: auto; margin-right: auto;">
 	      	<p class="content-padded">Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:</p>
 	    </div>
+	    <script>
+	      window.addEventListener('push', function(){
+	        var scriptsList = document.querySelectorAll('script.js-custom');
+	        for(var i = 0; i < scriptsList.length; ++i) {
+	          eval(scriptsList[i].innerHTML);
+	        }
+	      });
+	    </script>
   	</body>
 </html>
