@@ -18,7 +18,7 @@
     <script src="./js/ratchet.js"></script>
     <script type="text/javascript">
       function hide(a){
-        pchild=a.parentNode.getElementsByTagName('p');
+        pchild=a.parentNode.getElementsByTagName('div');
         if(pchild[0].style.visibility!='hidden'){
           pchild[0].style.visibility='hidden';
           pchild[0].style.height='0';
@@ -30,6 +30,13 @@
         }
       }
     </script>
+    <style type="text/css">
+      .perso
+      {
+        font-size: 12px;
+        color: #606060;
+      }
+    </style>
   </head>
   <body>
 
@@ -66,27 +73,68 @@
       <ul class="table-view">
         <li class="table-view-divider">PJ</li>
         <li class="table-view-cell">
-          <a class="navigate-right" onclick="hide(this)">Item 1</a>
-          <p style="visibility:hidden;height:0">
-            test<br>
-            test 2
-          </p>
+          <a class="navigate-right" onclick="hide(this)">Stan Ford, Humain, 26 ans</a>
+          <div style="visibility:hidden;height:0" class="perso">
+            Clichés
+            <ul>
+              <li>Explorateur en herbe présomptueux (4)</li>
+              <li>Fan de Clinston Briggstash, le célèbre humain aux milles aventures (3)</li>
+              <li>Don étonnant pour le bricolage (2)</li>
+              <li>Sait y faire avec la gente féminine (1)</li>
+            </ul>
+            Attirail
+            <ul>
+              <li>Chapeau d'explorateur</li>
+              <li>Boussole d'explorateur</li>
+              <li>Jumelles d'explorateur</li>
+              <li>Bottes d'explorateur</li>
+              <li>Pisto-Boule avec X boules</li>
+              <li>Fouet</li>
+              <li>Machette</li>
+            </ul>
+          </div>
         </li>
         <li class="table-view-cell">
-          <a class="navigate-right" onclick="hide(this)">Item 2</a>
-          <p style="visibility:hidden;height:0">
-            test<br>
-            test 2
-          </p>
+          <a class="navigate-right" onclick="hide(this)">Vent gris, Leu d’un certain âge, 52 ans</a>
+          <div style="visibility:hidden;height:0" class="perso">
+            Clichés
+            <ul>
+              <li>Discret comme la brise (4)</li>
+              <li>Bête sauvage aux os fragiles (3)</li>
+              <li>Odorat développé mais rouillé (2)</li>
+              <li>Amateur de légendes et de contes (1)</li>
+            </ul>
+            Inventaire
+            <ul>
+              <li>Surgriffe en os ancien (très résistant pour des os, c’est genre une main squelette d’un gros leu, attachée avec des lanières de cuir)</li>
+              <li>Une tenue légère en cuir</li>
+              <li>Une tenue en os pour certains combats</li>
+              <li>Une lame... en os</li>
+              <li>Un petit sac en lin</li>
+            </ul>
+          </div>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right" onclick="hide(this)">Franck, Humain, 25 ans, Ferrailleur</a>
+          <div style="visibility:hidden;height:0" class="perso">
+            Clichés
+            <ul>
+              <li>Fan de musculation et d’haltérophile, il ne peut s’empêcher de soulever tout ce qui semble lourd, y compris les ennemis (4)</li>
+              <li>Coopération optimale avec Tarzin, il le comprend et n’hésite pas à lui donner des ordres, comme pour attaquer par surprise un ennemi ou se faufiler à un endroit difficile d’accès (3)</li>
+              <li>Ami ET ennemi des bêtes, il est capable de comprendre le langage de beaucoup d’animaux de Mane, tout en se faisant comprendre par ceux-ci. Il est néanmoins pour l’extermination des parasites (2)</li>
+              <li>Collectionneur de ferraille, il a toujours un ou deux bouts sur lui, et adore tout ce qui est de fer et d’acier (1)</li>
+            </ul>
+            Inventaire
+            <ul>
+              <li>Tarzin (accroché dans le dos, par-dessus le sac à dos, mais peut se déplacer aussi à côté du perso, ou indépendamment de celui-ci)</li>
+              <li>Claymore à deux mains en ferraille recyclée</li>
+              <li>Friandises pour branchiard</li>
+              <li>Disque de fonte (10kg)</li>
+              <li>Tige en ferraille tressé, très fin</li>
+            </ul>
+          </div>
         </li>
         <li class="table-view-divider">PNJ</li>
-        <li class="table-view-cell">
-          <a class="navigate-right" onclick="hide(this)">Item 3</a>
-          <p style="visibility:hidden;height:0">
-            test<br>
-            test 2
-          </p>
-        </li>
       </ul>
     </div>
     <script>
