@@ -17,9 +17,10 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="./js/ratchet.js"></script>
     <style>
-      #map {
-        height: 700px;
-        width: 100%;
+      #map{
+        margin: 5px;
+        height: 82vh;
+        width: 97vw;
        }
     </style>
   </head>
@@ -66,13 +67,13 @@
           var imageSrc = './Mane.jpg';
 
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
+            zoom: 10,
             center: {lat: 62.391907, lng: -150.129291},
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             backgroudColor: 'none',
             disableDefaultUI: true,
             panControl: false,
-            minZoom: 11,
+            minZoom: 10,
             maxZoom: 13
           });
 
