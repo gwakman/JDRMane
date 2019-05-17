@@ -16,13 +16,9 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="./js/ratchet.js"></script>
-    <style>
-      #map{
-        margin: 5px;
-        height: 82vh;
-        width: 97vw;
-       }
-    </style>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./functions.js"></script>
   </head>
   <body>
 
@@ -58,19 +54,5 @@
     <div class="content">
       	<img id="map" src="./Mane.jpg"></img>
     </div>
-    <script>
-      function hide(a){
-        pchild=a.parentNode.getElementsByTagName('div');
-        if(pchild[0].style.visibility!='hidden'){
-          pchild[0].style.visibility='hidden';
-          pchild[0].style.height='0';
-          pchild[0].style.marginTop='';
-        } else {
-          pchild[0].style.visibility='';
-          pchild[0].style.height='';
-          pchild[0].style.marginTop='10px';
-        }
-      }
-    </script>
   </body>
 </html>
