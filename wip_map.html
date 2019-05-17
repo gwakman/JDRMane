@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JDR Mane - Carte</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="./css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="./js/ratchet.js"></script>
+    <style>
+      #map{
+        margin: 5px;
+        height: 82vh;
+        width: 97vw;
+       }
+    </style>
+    <script class="js-custom">
+        function initMap() {
+
+          var imageBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(62.281819, -150.287132),
+            new google.maps.LatLng(62.500471, -149.985608));
+
+          var imageSrc = './Mane.jpg';
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: {lat: 62.391907, lng: -150.129291},
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            backgroudColor: 'none',
+            disableDefaultUI: true,
+            panControl: false,
+            minZoom: 10,
+            maxZoom: 13
+          });
+
+          var mapStyles = [
+          {
+            featureType: "all",
+            stylers: [
+              { visibility: "off" }]
+          }];
+
+          map.setOptions({styles: mapStyles});
+
+          myOverlay = new google.maps.GroundOverlay(imageSrc, imageBounds);
+
+          myOverlay.setMap(map);
+        }
+    </script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">JDR Mane - Carte</h1>
+    </header>
+    
+    <nav class="bar bar-tab">
+      <a class="tab-item" href="index.html" data-transition="slide-out">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+      </a>
+      <a class="tab-item" href="story.html" data-transition="slide-out">
+        <span class="icon icon-info"></span>
+        <span class="tab-label">Histoire</span>
+      </a>
+      <a class="tab-item" href="characters.html" data-transition="slide-out">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Personnages</span>
+      </a>
+      <a class="tab-item" href="quests.html" data-transition="slide-out">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Quêtes</span>
+      </a>
+      <a class="tab-item active" href="#">
+        <span class="icon icon-compose"></span>
+        <span class="tab-label">Carte</span>
+      </a>
+    </nav>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <div id="map"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC35Rgq7LwqkYx0pC1_ZBae_5lcJQ1Hsqs&callback=initMap" class="js-custom"></script>
+    </div>
+    <script>
+      window.addEventListener('push', function(){
+        var scriptsList = document.querySelectorAll('script.js-custom');
+        for(var i = 0; i < scriptsList.length; ++i) {
+          eval(scriptsList[i].innerHTML);
+        }
+      });
+    </script>
+  </body>
+</html>
