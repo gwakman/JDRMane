@@ -53,12 +53,18 @@
 	      	<p class="content-padded"></p>
 	    </div>
 	    <script>
-	      window.addEventListener('push', function(){
-	        var scriptsList = document.querySelectorAll('script.js-custom');
-	        for(var i = 0; i < scriptsList.length; ++i) {
-	          eval(scriptsList[i].innerHTML);
+	      function hide(a){
+	        pchild=a.parentNode.getElementsByTagName('div');
+	        if(pchild[0].style.visibility!='hidden'){
+	          pchild[0].style.visibility='hidden';
+	          pchild[0].style.height='0';
+	          pchild[0].style.marginTop='';
+	        } else {
+	          pchild[0].style.visibility='';
+	          pchild[0].style.height='';
+	          pchild[0].style.marginTop='10px';
 	        }
-	      });
+	      }
 	    </script>
   	</body>
 </html>
