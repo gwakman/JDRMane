@@ -49,8 +49,44 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      <p class="content-padded">Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:</p>
-    </div>
+    	<div class="content-padded">
+	      	<ul class="table-view">
+	      		<li class="table-view-divider">Quêtes en cours</li>
+	    		<li class="table-view-cell">
+		          <a class="navigate-right" onclick="hide(this)">Visiter le manoir</a>
+		          <div style="visibility:hidden;height:0;width:80vw">
+		            <p>Suite à votre victoire contre Hadrôn, le maire de Goro vous a offert le titre de propriété d'un manoir situé à quelques heures d'Onilia. Reste à savoir à quoi il ressemble...</p>
+		          </div>
+		        </li>
+		        <li class="table-view-cell">
+		          <a class="navigate-right" onclick="hide(this)">Trouver le sanctuaire de Toetra</a>
+		          <div style="visibility:hidden;height:0;width:80vw">
+		            <p>Toetra vous a confié une mission : découvrir son sanctuaire caché dans les galeries sous le mont Mane. Vous trouverez peut-être davantage d'informations à la capitale ?</p>
+		          </div>
+		        </li>
+		        <li class="table-view-cell">
+		          <a class="navigate-right" onclick="hide(this)">Se rendre au mystérieux rendez-vous</a>
+		          <div style="visibility:hidden;height:0;width:80vw">
+		            <p>Sur le cadavre de l'homme fauve se trouvait un étrange message : "...". Peut-être que vous pourrez apprendre quelque chose en vous rendant à ce rendre-vous ?</p>
+		          </div>
+		        </li>
+	      	</ul>
+	    </div>
+	    <script type="text/javascript" class="js-custom">
+	      function hide(a){
+	        pchild=a.parentNode.getElementsByTagName('div');
+	        if(pchild[0].style.visibility!='hidden'){
+	          pchild[0].style.visibility='hidden';
+	          pchild[0].style.height='0';
+	          pchild[0].style.marginTop='';
+	        } else {
+	          pchild[0].style.visibility='';
+	          pchild[0].style.height='';
+	          pchild[0].style.marginTop='10px';
+	        }
+	      }
+	    </script>
+	</div>
     <script>
       window.addEventListener('push', function(){
         var scriptsList = document.querySelectorAll('script.js-custom');
