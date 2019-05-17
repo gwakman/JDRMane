@@ -16,20 +16,6 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="./js/ratchet.js"></script>
-    <script type="text/javascript">
-      function hide(a){
-        pchild=a.parentNode.getElementsByTagName('div');
-        if(pchild[0].style.visibility!='hidden'){
-          pchild[0].style.visibility='hidden';
-          pchild[0].style.height='0';
-          pchild[0].style.marginTop='';
-        } else {
-          pchild[0].style.visibility='';
-          pchild[0].style.height='';
-          pchild[0].style.marginTop='10px';
-        }
-      }
-    </script>
     <style type="text/css">
       .perso
       {
@@ -136,6 +122,20 @@
         </li>
         <li class="table-view-divider">PNJ</li>
       </ul>
+      <script type="text/javascript" class="js-custom">
+	      function hide(a){
+	        pchild=a.parentNode.getElementsByTagName('div');
+	        if(pchild[0].style.visibility!='hidden'){
+	          pchild[0].style.visibility='hidden';
+	          pchild[0].style.height='0';
+	          pchild[0].style.marginTop='';
+	        } else {
+	          pchild[0].style.visibility='';
+	          pchild[0].style.height='';
+	          pchild[0].style.marginTop='10px';
+	        }
+	      }
+	    </script>
     </div>
     <script>
       window.addEventListener('push', function(){
