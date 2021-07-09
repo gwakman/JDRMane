@@ -1,7 +1,9 @@
+.map{
+  text-align: center;
+  }
+
 #map{
-	margin: 5px;
-	height: 82vh;
-	width: 97vw;
+  height: 99%;
 }
 
 .perso{
