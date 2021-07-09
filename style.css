@@ -8,3 +8,7 @@
 	font-size: 12px;
 	color: #606060;
 }
+
+.content{
+  transition: left 2s, margin-right 2s;
+}

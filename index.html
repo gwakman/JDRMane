@@ -14,9 +14,6 @@
 	    <!-- Include the compiled Ratchet CSS -->
 	    <link href="./css/ratchet.css" rel="stylesheet">
 
-	    <!-- Include the compiled Ratchet JS -->
-	    <script src="./js/ratchet.js"></script>
-
 	    <link rel="stylesheet" href="./style.css">
     	<script src="./functions.js"></script>
  	</head>
@@ -28,32 +25,242 @@
 	    </header>
 	    
 	    <nav class="bar bar-tab">
-	      	<a class="tab-item active" href="#">
+	      	<a class="tab-item active" onclick="slide('home', this)">
 	        	<span class="icon icon-home"></span>
 	        	<span class="tab-label">Home</span>
 	      	</a>
-	      	<a class="tab-item" href="story.html" data-transition="slide-in">
+	      	<a class="tab-item" onclick="slide('story', this)">
 	       		<span class="icon icon-info"></span>
 	        	<span class="tab-label">Histoire</span>
 	      	</a>
-	      	<a class="tab-item" href="characters.html" data-transition="slide-in">
+	      	<a class="tab-item" onclick="slide('characters', this)">
 	        	<span class="icon icon-person"></span>
 	        	<span class="tab-label">Personnages</span>
 	      	</a>
-	      	<a class="tab-item" href="quests.html" data-transition="slide-in">
+	      	<a class="tab-item" onclick="slide('quests', this)">
 	        	<span class="icon icon-search"></span>
 	        	<span class="tab-label">Quêtes</span>
 	      	</a>
-	      	<a class="tab-item" href="map.html" data-transition="slide-in">
+	      	<a class="tab-item" onclick="slide('map', this)">
 	        	<span class="icon icon-compose"></span>
 	        	<span class="tab-label">Carte</span>
 			</a>
 	    </nav>
 
 	    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-	    <div class="content">
+	    <div class="content home">
 	     	<img src="logo_Mane.png" style="display: block; margin-left: auto; margin-right: auto;">
 	      	<p class="content-padded"></p>
 	    </div>
+      
+      <div style="visibility:hidden" class="content story">
+      <div class="content-padded">
+        <ul class="table-view">
+          <li class="table-view-divider">Arc 1 : La chasse au Lézard</li>
+          <li class="table-view-cell">
+            <a class="navigate-right" onclick="hide(this)"
+              >Session du 08/04/19 :</a
+            >
+            <div style="visibility:hidden;height:0;width:80vw">
+              <p>
+                Nos 3 héros se rencontrent le 15 Sambra à la taverne de
+                l’araignée farcie suite à une annonce laissée sur le panneau
+                d’affichage de place principale d’Onilia.
+              </p>
+              <p>
+                Ils font alors la connaissance de Tom BISTE et de Thyro GRIMAR.
+                Tom BISTE leur propose de les accompagner dans son expédition
+                vers Goro, pour y chasser un monstre qui sévit dans la région.
+              </p>
+              <p>
+                Le lendemain, ils se mettent en route. Ils triomphent d’une
+                bande de voanios puis s’arrêtent dans un petit hameau pour se
+                ravitailler (non sans causer de petits problèmes au passage).
+              </p>
+              <p>
+                Le 19 Sambra, ils arrivent à Goro. En se renseignant, ils
+                obtiennent alors des informations sur l’emplacement présumé de
+                la créature.
+              </p>
+              <p>
+                L’équipe part alors investiguer et découvre un mystérieux
+                tombeau ainsi qu’un féroce humanoïde à l’allure fauve…
+              </p>
+            </div>
+          </li>
+          <li class="table-view-cell">
+            <a class="navigate-right" onclick="hide(this)"
+              >Session du 29/04/19 :</a
+            >
+            <div style="visibility:hidden;height:0;width:80vw">
+              <p>
+                Le groupe d’aventuriers rencontre Toetra qui leur demande de
+                bien vouloir maitrise Hadrôn sans le tuer à l’aide d’une étrange
+                sphère argentée. Quelques minutes plus tard, le groupe fait face
+                à Hadrôn qui rentre dans son repaire. Les chasseurs doivent
+                rapidement se replier pour ne pas perdre le combat.
+              </p>
+              <p>
+                Après avoir semé la bête, ils retournent visiter le tombeau et
+                fouillent le cadavre de l’homme-fauve sur lequel ils trouvent un
+                message leur indiquant un rendez-vous qui aura lieu dans un
+                avenir proche.
+              </p>
+              <p>
+                Ils décident alors de traquer et de marquer la bête pour un
+                affrontement futur. Manquant de discrétion, ils se retrouvent à
+                nouveau en train de combattre la bête et arrivent à la faire
+                fuir en déclenchant des explosions qui effrayent la créature.
+                Néanmoins nos héros sont légèrement blessés et profitent d’une
+                bonne nuit de sommeil pour se reposer.
+              </p>
+              <p>
+                Le lendemain matin, ils retournent au village afin de réfléchir
+                à un plan pour vaincre Hadrôn sans le tuer. Vent-gris fait la
+                connaissance de la grand-mère de Tom Biste et Franck capture un
+                vieil herboriste du village à l’aide de Tarzin.
+              </p>
+              <p>
+                Malgré un Tom Biste réticent, le vieil homme est trainé dans la
+                forêt pour servir d’appât pour un piège. Le piège ayant
+                fonctionné, nos compagnons ramènent Hadrôn à la grotte et Toetra
+                leur demande de bien vouloir le retrouver dans son sanctuaire,
+                situé sous le mont Mane.
+              </p>
+              <p>
+                Tom Biste souhaite s’éclipser mais la récompense n’a pas encore
+                été versée. Il mène donc le groupe jusqu’à la maison du maire du
+                village qui leur confie en récompense le titre de propriété d’un
+                manoir situé à quelques heures à l’ouest de la capitale. Franck
+                en est donc le propriétaire officiel après signature des
+                documents.
+              </p>
+              <p>
+                Tom Biste décide de rentrer chez lui et nos héros se mettent
+                alors en route vers le fameux manoir…
+              </p>
+            </div>
+          </li>
+          <li class="table-view-divider">Arc 2</li>
+        </ul>
+      </div>
+    </div>
+      
+    <div style="visibility:hidden" class="content characters">
+      <div class="content-padded">
+	      <ul class="table-view">
+	        <li class="table-view-divider">PJ</li>
+	        <li class="table-view-cell">
+	          <a class="navigate-right" onclick="hide(this)">Stan Ford, Humain, 26 ans</a>
+	          <div style="visibility:hidden;height:0;width:80vw" class="perso">
+	            Clichés
+	            <ul>
+	              <li>Explorateur en herbe présomptueux (4)</li>
+	              <li>Fan de Clinston Briggstash, le célèbre humain aux milles aventures (3)</li>
+	              <li>Don étonnant pour le bricolage (2)</li>
+	              <li>Sait y faire avec la gente féminine (1)</li>
+	            </ul>
+	            Attirail
+	            <ul>
+	              <li>Chapeau d'explorateur</li>
+	              <li>Boussole d'explorateur</li>
+	              <li>Jumelles d'explorateur</li>
+	              <li>Bottes d'explorateur</li>
+	              <li>Pisto-Boule avec X boules</li>
+	              <li>Fouet</li>
+	              <li>Machette</li>
+	            </ul>
+	          </div>
+	        </li>
+	        <li class="table-view-cell">
+	          <a class="navigate-right" onclick="hide(this)">Vent gris, Leu d’un certain âge, 52 ans</a>
+	          <div style="visibility:hidden;height:0;width:80vw" class="perso">
+	            Clichés
+	            <ul>
+	              <li>Discret comme la brise (4)</li>
+	              <li>Bête sauvage aux os fragiles (3)</li>
+	              <li>Odorat développé mais rouillé (2)</li>
+	              <li>Amateur de légendes et de contes (1)</li>
+	            </ul>
+	            Inventaire
+	            <ul>
+	              <li>Surgriffe en os ancien (très résistant pour des os, c’est genre une main squelette d’un gros leu, attachée avec des lanières de cuir)</li>
+	              <li>Une tenue légère en cuir</li>
+	              <li>Une tenue en os pour certains combats</li>
+	              <li>Une lame... en os</li>
+	              <li>Un petit sac en lin</li>
+	            </ul>
+	          </div>
+	        </li>
+	        <li class="table-view-cell">
+	          <a class="navigate-right" onclick="hide(this)">Franck, Humain, 25 ans, Ferrailleur</a>
+	          <div style="visibility:hidden;height:0;width:80vw" class="perso">
+	            Clichés
+	            <ul>
+	              <li>Fan de musculation et d’haltérophile, il ne peut s’empêcher de soulever tout ce qui semble lourd, y compris les ennemis (4)</li>
+	              <li>Coopération optimale avec Tarzin, il le comprend et n’hésite pas à lui donner des ordres, comme pour attaquer par surprise un ennemi ou se faufiler à un endroit difficile d’accès (3)</li>
+	              <li>Ami ET ennemi des bêtes, il est capable de comprendre le langage de beaucoup d’animaux de Mane, tout en se faisant comprendre par ceux-ci. Il est néanmoins pour l’extermination des parasites (2)</li>
+	              <li>Collectionneur de ferraille, il a toujours un ou deux bouts sur lui, et adore tout ce qui est de fer et d’acier (1)</li>
+	            </ul>
+	            Inventaire
+	            <ul>
+	              <li>Tarzin (accroché dans le dos, par-dessus le sac à dos, mais peut se déplacer aussi à côté du perso, ou indépendamment de celui-ci)</li>
+	              <li>Claymore à deux mains en ferraille recyclée</li>
+	              <li>Friandises pour branchiard</li>
+	              <li>Disque de fonte (10kg)</li>
+	              <li>Tige en ferraille tressé, très fin</li>
+	            </ul>
+	          </div>
+	        </li>
+	        <li class="table-view-divider">PNJ</li>
+	      </ul>
+  	  </div>
+    </div>
+      
+    <div style="visibility:hidden" class="content quests">
+      <div class="content-padded">
+        <ul class="table-view">
+          <li class="table-view-divider">Quêtes en cours</li>
+          <li class="table-view-cell">
+            <a class="navigate-right" onclick="hide(this)">Visiter le manoir</a>
+            <div style="visibility:hidden;height:0;width:80vw">
+              <p>
+                Suite à votre victoire contre Hadrôn, le maire de Goro vous a
+                offert le titre de propriété d'un manoir situé à quelques heures
+                d'Onilia. Reste à savoir à quoi il ressemble...
+              </p>
+            </div>
+          </li>
+          <li class="table-view-cell">
+            <a class="navigate-right" onclick="hide(this)"
+              >Trouver le sanctuaire de Toetra</a
+            >
+            <div style="visibility:hidden;height:0;width:80vw">
+              <p>
+                Toetra vous a confié une mission : découvrir son sanctuaire
+                caché dans les galeries sous le mont Mane. Vous trouverez
+                peut-être davantage d'informations à la capitale ?
+              </p>
+            </div>
+          </li>
+          <li class="table-view-cell">
+            <a class="navigate-right" onclick="hide(this)"
+              >Se rendre au mystérieux rendez-vous</a
+            >
+            <div style="visibility:hidden;height:0;width:80vw">
+              <p>
+                Sur le cadavre de l'homme fauve se trouvait un étrange message :
+                "...". Peut-être que vous pourrez apprendre quelque chose en
+                vous rendant à ce rendre-vous ?
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+      
+    <div style="visibility:hidden" class="content map">
+      	<img id="map" src="./Mane.jpg">
+    </div>
   	</body>
 </html>
